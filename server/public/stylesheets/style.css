@@ -6,3 +6,15 @@ body {
 a {
   color: #00B7FF;
 }
+
+.icon {
+  background-image: url(../images/icons.png);
+}
+
+.iconLogo {
+  background-repeat: no-repeat;
+  background-size: 520px auto;
+  background-position: -152px -116px;
+  height: 51px;
+  width: 175px;
+}

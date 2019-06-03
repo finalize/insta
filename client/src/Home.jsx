@@ -16,7 +16,7 @@ export default class Home extends React.Component {
   render () {
     return <div className="loginArea">
       <div className="loginPad">
-        <h1 className="logo"></h1>
+        <h1 className={'iconLogo '+'icon'}></h1>
         <Form/>
       </div>
       <div className="regist">
