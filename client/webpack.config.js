@@ -1,6 +1,6 @@
 module.exports = {
     mode: "development",
-    entry: "./src/index.js",
+    entry: "./src/index.jsx",
     output: {
       filename: "bundle.js",
       path: __dirname + "/../server/public/javascripts"
@@ -9,25 +9,28 @@ module.exports = {
     devtool: "source-map",
   
     resolve: {
-      extensions: [".ts", ".tsx", ".js", ".json"]
+      extensions: [".jsx", ".ts", ".tsx", ".js", ".json"]
     },
   
     module: {
       rules: [
         {
-          enforce: "pre",
-          test: /\.tsx?$/,
+          // 拡張子 .js の場合
+          test: /\.jsx$/,
           use: [
             {
-              loader: "tslint-loader",
+              // Babel を利用する
+              loader: "babel-loader",
+              // Babel のオプションを指定する
               options: {
-                typeCheck: true,
-                fix: true
+                presets: [
+                  // プリセットを指定することで、ES2019 を ES5 に変換
+                  "@babel/preset-env"
+                ]
               }
             }
           ]
-        },
-        { test: /\.tsx?$/, loader: "ts-loader" }
+        }
       ]
     }
   };
