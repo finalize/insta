@@ -4,11 +4,6 @@ import Home from "./Home";
 
 const App = () => (
   <BrowserRouter>
-    <ul>
-      <li><Link to='/'>Home</Link></li>
-      <li><Link to='/about'>About</Link></li>
-      <li><Link to='/friends'>Friends</Link></li>
-    </ul>
     <Route exact path='/' component={Home} />
     <Route path='/about' component={About} />
     <Route path='/friends' component={Friends} />

@@ -1,20 +1,12 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: #fafafa;
+  min-height: 100vh;
+  box-sizing: border-box;
+  margin: 0;
 }
 
 a {
   color: #00B7FF;
-}
-
-.icon {
-  background-image: url(../images/icons.png);
-}
-
-.iconLogo {
-  background-repeat: no-repeat;
-  background-size: 520px auto;
-  background-position: -152px -116px;
-  height: 51px;
-  width: 175px;
 }
