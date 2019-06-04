@@ -180,7 +180,8 @@ export default class Form extends React.Component {
             }
           >
             ログイン
-          </Button></ButtonWrap>
+          </Button>
+        </ButtonWrap>
       </LoginFormBox>
     </LoginForm>
   }
