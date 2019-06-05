@@ -124,15 +124,15 @@ export default class Form extends React.Component {
     this.checkAuth = this.checkAuth.bind(this);
   }
 
-  handleChangeId (event) {
+  handleChangeId(event) {
     this.setState({ uid: event.target.value });
   }
 
-  handleChangePass (event) {
+  handleChangePass(event) {
     this.setState({ upass: event.target.value });
   }
 
-  checkAuth (uid, upass) {
+  checkAuth(uid, upass) {
     const data = {
       id: uid,
       password: upass
@@ -153,7 +153,7 @@ export default class Form extends React.Component {
         <InputWrap><InputBox><InputInner>
           <Label htmlFor="uid">電話番号、ユーザーネーム、メールアドレス</Label>
           <Input type="text" name="uid" id="uid"
-            onChange = { (event) => {
+            onChange = {(event) => {
                 this.handleChangeId(event);
               }
             }
@@ -163,7 +163,7 @@ export default class Form extends React.Component {
         <InputWrap><InputBox><InputInner>
           <Label htmlFor="upass">パスワード</Label>
           <Input type="password" name="upass" id="upass"
-            onChange = { (event) => {
+            onChange = {(event) => {
                 this.handleChangePass(event);
               }
             }

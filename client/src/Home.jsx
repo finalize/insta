@@ -1,6 +1,7 @@
 import React from "react";
 import Form from "./form";
 import styled from "styled-components";
+import Top from "./top";
 
 const LoginArea = styled.div`
   color: #262626;
@@ -62,7 +63,7 @@ export default class Home extends React.Component {
 
   render () {
     if ( this.state.uid ) {
-      return <div/>;
+      return <Top/>;
     } else {
       return <LoginArea>
         <LoginPad>
