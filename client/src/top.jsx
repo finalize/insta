@@ -19,6 +19,10 @@ const Button = styled.button`
   text-transform: inherit;
   text-overflow: ellipsis;
   user-select: none;
+<<<<<<< HEAD
+=======
+  width: auto;
+>>>>>>> client_bk
   background-color: #3897f0;
   border: 1px solid #3897f0;
   border-radius: 4px;
