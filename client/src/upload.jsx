@@ -28,7 +28,7 @@ export default class Upload extends React.Component {
       .post("http://localhost:3000/photos/upload", params)
       .then(
         (val) => {
-          this.state.imagePath = val.data.file.path
+          this.setState({imagePath: val.data.file.path})
         }
       )
   }
@@ -41,7 +41,7 @@ export default class Upload extends React.Component {
     return (
       <UploadModal>
         <div>
-          <input type="file" name="image" ref="image" value={this.state.image} />
+          <input type="file" name="image" ref="image" />
           <button value="Upload"
             onClick = {
               () => {

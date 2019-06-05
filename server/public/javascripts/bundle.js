@@ -34234,7 +34234,9 @@ function (_React$Component) {
       var fileSelectDom = this.refs.image;
       params.append('image', fileSelectDom.files[0]);
       axios__WEBPACK_IMPORTED_MODULE_2___default.a.post("http://localhost:3000/photos/upload", params).then(function (val) {
-        _this2.state.imagePath = val.data.file.path;
+        _this2.setState({
+          imagePath: val.data.file.path
+        });
       });
     }
   }, {
@@ -34252,8 +34254,7 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(UploadModal, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "file",
         name: "image",
-        ref: "image",
-        value: this.state.image
+        ref: "image"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         value: "Upload",
         onClick: function onClick() {
