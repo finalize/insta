@@ -33914,13 +33914,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Home; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-<<<<<<< HEAD
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var _form__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./form */ "./src/form.jsx");
-=======
-/* harmony import */ var _form__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./form */ "./src/form.jsx");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
->>>>>>> client_bk
 /* harmony import */ var _top__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./top */ "./src/top.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -33976,15 +33971,9 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
-<<<<<<< HEAD
 var LoginArea = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject());
 var RegistPad = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject2());
 var LoginPad = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject3());
-=======
-var LoginArea = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject());
-var RegistPad = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject2());
-var LoginPad = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject3());
->>>>>>> client_bk
 
 var Home =
 /*#__PURE__*/
@@ -34027,11 +34016,7 @@ function (_React$Component) {
       if (this.state.uid) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_top__WEBPACK_IMPORTED_MODULE_3__["default"], null);
       } else {
-<<<<<<< HEAD
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(LoginArea, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(LoginPad, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_form__WEBPACK_IMPORTED_MODULE_2__["default"], {
-=======
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(LoginArea, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(LoginPad, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_form__WEBPACK_IMPORTED_MODULE_1__["default"], {
->>>>>>> client_bk
           setUid: this.setUid
         })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(LoginPad, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(RegistPad, null, "\u30A2\u30AB\u30A6\u30F3\u30C8\u3092\u304A\u6301\u3061\u3067\u306A\u3044\u3067\u3059\u304B\uFF1F ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
           href: "#"
@@ -34101,11 +34086,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 function _templateObject2() {
-<<<<<<< HEAD
-  var data = _taggedTemplateLiteral(["\n  appearance: none;\n  background: 0 0;\n  border: 0;\n  box-sizing: border-box;\n  cursor: pointer;\n  display: block;\n  font-weight: 600;\n  padding: 5px 9px;\n  text-align: center;\n  text-transform: inherit;\n  text-overflow: ellipsis;\n  user-select: none;\n  background-color: #3897f0;\n  border: 1px solid #3897f0;\n  border-radius: 4px;\n  color: #fff;\n  position: relative;\n  font-size: inherit;\n"]);
-=======
   var data = _taggedTemplateLiteral(["\n  appearance: none;\n  background: 0 0;\n  border: 0;\n  box-sizing: border-box;\n  cursor: pointer;\n  display: block;\n  font-weight: 600;\n  padding: 5px 9px;\n  text-align: center;\n  text-transform: inherit;\n  text-overflow: ellipsis;\n  user-select: none;\n  width: auto;\n  background-color: #3897f0;\n  border: 1px solid #3897f0;\n  border-radius: 4px;\n  color: #fff;\n  position: relative;\n  font-size: inherit;\n"]);
->>>>>>> client_bk
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -34113,17 +34094,10 @@ function _templateObject2() {
 
   return data;
 }
-<<<<<<< HEAD
 
 function _templateObject() {
   var data = _taggedTemplateLiteral(["\n  margin: 8px 40px 22px;\n"]);
 
-=======
-
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  margin: 8px 40px 22px;\n"]);
-
->>>>>>> client_bk
   _templateObject = function _templateObject() {
     return data;
   };
@@ -34159,23 +34133,15 @@ function (_React$Component) {
   _createClass(Top, [{
     key: "renderModal",
     value: function renderModal() {
-<<<<<<< HEAD
       return this.state.isDisplay && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_upload__WEBPACK_IMPORTED_MODULE_2__["default"], null);
-=======
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_upload__WEBPACK_IMPORTED_MODULE_2__["default"], null);
->>>>>>> client_bk
     }
   }, {
     key: "render",
     value: function render() {
       var _this2 = this;
 
-<<<<<<< HEAD
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ButtonWrap, null, this.renderModal(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Button, {
         type: "button",
-=======
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ButtonWrap, null, this.state.isDisplay && this.renderModal(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Button, {
->>>>>>> client_bk
         onClick: function onClick() {
           _this2.setState({
             isDisplay: !_this2.state.isDisplay
@@ -34205,6 +34171,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -34224,11 +34192,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 function _templateObject() {
-<<<<<<< HEAD
-  var data = _taggedTemplateLiteral(["\n  background: #000;\n  width: 300px;\n  height: 200px;  \n"]);
-=======
   var data = _taggedTemplateLiteral(["\n  margin: 8px 40px 22px;\n  background: #fff;\n  height: 200px;\n  width: 300px;\n"]);
->>>>>>> client_bk
 
   _templateObject = function _templateObject() {
     return data;
@@ -34241,6 +34205,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
+
 var UploadModal = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject());
 
 var Upload =
@@ -34248,30 +34213,53 @@ var Upload =
 function (_React$Component) {
   _inherits(Upload, _React$Component);
 
-  function Upload() {
+  function Upload(props) {
+    var _this;
+
     _classCallCheck(this, Upload);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Upload).apply(this, arguments));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Upload).call(this, props));
+    _this.state = {
+      imagePath: undefined
+    };
+    return _this;
   }
 
   _createClass(Upload, [{
+    key: "sendUpload",
+    value: function sendUpload() {
+      var _this2 = this;
+
+      var params = new FormData();
+      var fileSelectDom = this.refs.image;
+      params.append('image', fileSelectDom.files[0]);
+      axios__WEBPACK_IMPORTED_MODULE_2___default.a.post("http://localhost:3000/photos/upload", params).then(function (val) {
+        _this2.state.imagePath = val.data.file.path;
+      });
+    }
+  }, {
+    key: "showImage",
+    value: function showImage() {
+      return this.state.imagePath && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: this.state.imagePath
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
-<<<<<<< HEAD
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(UploadModal, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-        action: "/images",
-        method: "post",
-        encType: "multipart/form-data"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      var _this3 = this;
+
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(UploadModal, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "file",
-        name: "image"
+        name: "image",
+        ref: "image",
+        value: this.state.image
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        type: "submit",
-        value: "Upload"
-      }, "upload")));
-=======
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(UploadModal, null);
->>>>>>> client_bk
+        value: "Upload",
+        onClick: function onClick() {
+          _this3.sendUpload();
+        }
+      }, "upload")), this.showImage());
     }
   }]);
 
