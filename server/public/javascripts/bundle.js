@@ -34234,8 +34234,10 @@ function (_React$Component) {
       var fileSelectDom = this.refs.image;
       params.append('image', fileSelectDom.files[0]);
       axios__WEBPACK_IMPORTED_MODULE_2___default.a.post("http://localhost:3000/photos/upload", params).then(function (val) {
+        var rowPath = val.data.file.path;
+
         _this2.setState({
-          imagePath: val.data.file.path
+          imagePath: rowPath.replace('public/', '')
         });
       });
     }

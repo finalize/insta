@@ -28,7 +28,8 @@ export default class Upload extends React.Component {
       .post("http://localhost:3000/photos/upload", params)
       .then(
         (val) => {
-          this.setState({imagePath: val.data.file.path})
+          const rowPath = val.data.file.path;
+          this.setState({imagePath: rowPath.replace('public/', '')})
         }
       )
   }
