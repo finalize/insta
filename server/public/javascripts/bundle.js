@@ -33674,6 +33674,130 @@ var Friends = function Friends() {
 
 /***/ }),
 
+/***/ "./src/footer.jsx":
+/*!************************!*\
+  !*** ./src/footer.jsx ***!
+  \************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Footer; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _upload__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./upload */ "./src/upload.jsx");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n  &::before {\n    background: rgba(0,0,0,.0975);\n    content: '';\n    height: 1px;\n    left: 0;\n    position: absolute;\n    right: 0;\n    top: -1px;\n  }\n\n  background-color: #fff;\n  border: 0;\n  bottom: 0;\n  height: 44px;\n  left: 0;\n  position: fixed;\n  right: 0;\n  top: auto;\n  user-select: none;\n  z-index: 10;\n\n  .footerInner, a {\n    align-items: center;\n    display: flex;\n    flex-direction: row;\n    height: 100%;\n  }\n\n  a {\n    justify-content: center;\n  }\n\n  .footerItem {\n    webkit-box-flex: 1;\n    flex-grow: 1;\n    height: 100%;\n    justify-content: center;\n\n    span {\n      display: block;\n      background-image: url(../images/icons2.png);\n      background-repeat: no-repeat;\n      background-size: 337px 298px;\n      height: 24px;\n      width: 24px;\n\n      &.footerIcon1 {\n        background-position: -263px -150px;\n      }\n      &.footerIcon2 {\n        background-position: -150px -274px;\n      }\n      &.footerIcon3 {\n        background-position: -288px -75px;\n      }\n      &.footerIcon4 {\n        background-position: -263px -125px;\n      }\n      &.footerIcon5 {\n        background-position: -263px 0;\n      }\n    }\n  }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+
+
+
+var FooterWrap = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject());
+
+var Footer =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(Footer, _React$Component);
+
+  function Footer(props) {
+    var _this;
+
+    _classCallCheck(this, Footer);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Footer).call(this, props));
+    _this.state = {
+      isDisplay: false
+    };
+    return _this;
+  }
+
+  _createClass(Footer, [{
+    key: "renderModal",
+    value: function renderModal() {
+      return this.state.isDisplay && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_upload__WEBPACK_IMPORTED_MODULE_2__["default"], null);
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(FooterWrap, null, this.renderModal(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "footerInner"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "footerItem"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "footerIcon1"
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "footerItem"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "footerIcon2"
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "footerItem"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#",
+        onClick: function onClick() {
+          _this2.setState({
+            isDisplay: !_this2.state.isDisplay
+          });
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "footerIcon3"
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "footerItem"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "footerIcon4"
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "footerItem"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "footerIcon5"
+      })))));
+    }
+  }]);
+
+  return Footer;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+
+
+/***/ }),
+
 /***/ "./src/form.jsx":
 /*!**********************!*\
   !*** ./src/form.jsx ***!
@@ -33902,6 +34026,92 @@ function (_React$Component) {
 
 /***/ }),
 
+/***/ "./src/header.jsx":
+/*!************************!*\
+  !*** ./src/header.jsx ***!
+  \************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Header; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n  &::before {\n    background-color: rgba(0,0,0,.0975);\n    bottom: -1px;\n    content: '';\n    height: 1px;\n    left: 0;\n    position: absolute;\n    right: 0;\n  }\n\n  background-color: #fff;\n  display: flex;\n  flex-wrap: wrap;\n  font-size: 16px;\n  font-weight: 600;\n  left: 0;\n  position: fixed;\n  right: 0;\n  top: 0;\n  z-index: 1;\n  flex-direction: column;\n\n  .headerInner {\n    display: flex;\n    align-items: center;\n    height: 44px;\n    justify-content: space-between;\n    padding: 0 16px;\n  }\n\n  .uploadBox {\n    flex-basis: 20%;\n    flex-direction: row;\n  }\n\n  .uploadBtn {\n    background: 0 0;\n    border: 0;\n    margin: 0;\n    padding: 0;\n    font-family: -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif;\n    font-size: 14px;\n    line-height: 18px;\n  }\n\n  .uploadIcon {\n    display: block;\n    background-image: url(../images/icons2.png);\n    background-repeat: no-repeat;\n    background-size: 337px 298px;\n    background-position: -175px -224px;\n    height: 24px;\n    width: 24px;\n  }\n\n  h1 {\n    align-items: center;\n    color: #262626;\n    display: flex;\n    flex-grow: 1;\n    justify-content: center;\n    min-width: 0;\n    overflow: hidden;\n    text-align: center;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n\n    span {\n      display: block;\n      background-image: url(../images/icons2.png);\n      background-repeat: no-repeat;\n      background-size: 337px 298px;\n      background-position: -92px -71px;\n      height: 29px;\n      width: 103px;\n    }\n  }\n\n  .direct {\n    display: flex;\n    justify-content: flex-end;\n    flex-basis: 20%;\n    flex-direction: row;\n\n    span {\n      display: block;\n      background-image: url(../images/icons2.png);\n      background-repeat: no-repeat;\n      background-size: 337px 298px;\n      background-position: -225px -199px;\n      height: 24px;\n      width: 24px;\n    }\n  }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+
+
+var HeaderWrap = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject());
+
+var Header =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(Header, _React$Component);
+
+  function Header() {
+    _classCallCheck(this, Header);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(Header).apply(this, arguments));
+  }
+
+  _createClass(Header, [{
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(HeaderWrap, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "headerInner"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "uploadBox"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "uploadBtn"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "uploadIcon"
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "/"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "direct"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null)))));
+    }
+  }]);
+
+  return Header;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+
+
+/***/ }),
+
 /***/ "./src/home.jsx":
 /*!**********************!*\
   !*** ./src/home.jsx ***!
@@ -34066,7 +34276,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var _upload__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./upload */ "./src/upload.jsx");
+/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./header */ "./src/header.jsx");
+/* harmony import */ var _footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./footer */ "./src/footer.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -34085,33 +34296,10 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  appearance: none;\n  background: 0 0;\n  border: 0;\n  box-sizing: border-box;\n  cursor: pointer;\n  display: block;\n  font-weight: 600;\n  padding: 5px 9px;\n  text-align: center;\n  text-transform: inherit;\n  text-overflow: ellipsis;\n  user-select: none;\n  width: auto;\n  background-color: #3897f0;\n  border: 1px solid #3897f0;\n  border-radius: 4px;\n  color: #fff;\n  position: relative;\n  font-size: inherit;\n"]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  margin: 8px 40px 22px;\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 
 
 
-var ButtonWrap = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject());
-var Button = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].button(_templateObject2());
 
 var Top =
 /*#__PURE__*/
@@ -34133,21 +34321,12 @@ function (_React$Component) {
   _createClass(Top, [{
     key: "renderModal",
     value: function renderModal() {
-      return this.state.isDisplay && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_upload__WEBPACK_IMPORTED_MODULE_2__["default"], null);
+      return this.state.isDisplay && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Upload, null);
     }
   }, {
     key: "render",
     value: function render() {
-      var _this2 = this;
-
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ButtonWrap, null, this.renderModal(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Button, {
-        type: "button",
-        onClick: function onClick() {
-          _this2.setState({
-            isDisplay: !_this2.state.isDisplay
-          });
-        }
-      }, "\u65B0\u898F\u6295\u7A3F\u3059\u308B"));
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_header__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_footer__WEBPACK_IMPORTED_MODULE_3__["default"], null));
     }
   }]);
 
@@ -34192,7 +34371,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  margin: 8px 40px 22px;\n  background: #fff;\n  height: 200px;\n  width: 300px;\n"]);
+  var data = _taggedTemplateLiteral(["\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  background: #fff;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -34242,8 +34421,8 @@ function (_React$Component) {
       });
     }
   }, {
-    key: "showImage",
-    value: function showImage() {
+    key: "renderImage",
+    value: function renderImage() {
       return this.state.imagePath && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: this.state.imagePath
       });
@@ -34262,7 +34441,7 @@ function (_React$Component) {
         onClick: function onClick() {
           _this3.sendUpload();
         }
-      }, "upload")), this.showImage());
+      }, "upload")), this.renderImage());
     }
   }]);
 

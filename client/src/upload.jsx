@@ -3,10 +3,12 @@ import styled from "styled-components";
 import axios from "axios";
 
 const UploadModal = styled.div`
-  margin: 8px 40px 22px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   background: #fff;
-  height: 200px;
-  width: 300px;
 `;
 
 export default class Upload extends React.Component {
@@ -34,7 +36,7 @@ export default class Upload extends React.Component {
       )
   }
 
-  showImage() {
+  renderImage() {
     return this.state.imagePath && <img src={this.state.imagePath}/>
   }
 
@@ -51,7 +53,7 @@ export default class Upload extends React.Component {
             }
           >upload</button>
         </div>
-        {this.showImage()}
+        {this.renderImage()}
       </UploadModal>
     )
   }
