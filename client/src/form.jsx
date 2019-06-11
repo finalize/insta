@@ -6,14 +6,7 @@ const LoginForm = styled.div`
 `;
 
 const LoginFormBox = styled.div`
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
 `;
 
@@ -137,8 +130,9 @@ export default class Form extends React.Component {
       id: uid,
       password: upass
     };
+    
     axios
-      .post('http://localhost:3000/api/login', data)
+      .post(`${url}/api/login`, data)
       .then((val) => {
         this.props.setUid(val.data.id);
       })
@@ -153,7 +147,8 @@ export default class Form extends React.Component {
         <InputWrap><InputBox><InputInner>
           <Label htmlFor="uid">電話番号、ユーザーネーム、メールアドレス</Label>
           <Input type="text" name="uid" id="uid"
-            onChange = {(event) => {
+            onChange = {
+              (event) => {
                 this.handleChangeId(event);
               }
             }
@@ -163,7 +158,8 @@ export default class Form extends React.Component {
         <InputWrap><InputBox><InputInner>
           <Label htmlFor="upass">パスワード</Label>
           <Input type="password" name="upass" id="upass"
-            onChange = {(event) => {
+            onChange = {
+              (event) => {
                 this.handleChangePass(event);
               }
             }

@@ -33687,7 +33687,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var _upload__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./upload */ "./src/upload.jsx");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _upload__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./upload */ "./src/upload.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -33698,16 +33700,16 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  &::before {\n    background: rgba(0,0,0,.0975);\n    content: '';\n    height: 1px;\n    left: 0;\n    position: absolute;\n    right: 0;\n    top: -1px;\n  }\n\n  background-color: #fff;\n  border: 0;\n  bottom: 0;\n  height: 44px;\n  left: 0;\n  position: fixed;\n  right: 0;\n  top: auto;\n  user-select: none;\n  z-index: 10;\n\n  .footerInner, a {\n    align-items: center;\n    display: flex;\n    flex-direction: row;\n    height: 100%;\n  }\n\n  a {\n    justify-content: center;\n  }\n\n  .footerItem {\n    webkit-box-flex: 1;\n    flex-grow: 1;\n    height: 100%;\n    justify-content: center;\n\n    span {\n      display: block;\n      background-image: url(../images/icons2.png);\n      background-repeat: no-repeat;\n      background-size: 337px 298px;\n      height: 24px;\n      width: 24px;\n\n      &.footerIcon1 {\n        background-position: -263px -150px;\n      }\n      &.footerIcon2 {\n        background-position: -150px -274px;\n      }\n      &.footerIcon3 {\n        background-position: -288px -75px;\n      }\n      &.footerIcon4 {\n        background-position: -263px -125px;\n      }\n      &.footerIcon5 {\n        background-position: -263px 0;\n      }\n    }\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  &::before {\n    background: rgba(0,0,0,.0975);\n    content: '';\n    height: 1px;\n    left: 0;\n    position: absolute;\n    right: 0;\n    top: -1px;\n  }\n\n  background-color: #fff;\n  border: 0;\n  bottom: 0;\n  height: 44px;\n  left: 0;\n  position: fixed;\n  right: 0;\n  top: auto;\n  user-select: none;\n  z-index: 10;\n\n  .footerInner, a, label {\n    align-items: center;\n    display: flex;\n    flex-direction: row;\n    height: 100%;\n  }\n\n  a, label {\n    justify-content: center;\n  }\n\n  .footerItem {\n    webkit-box-flex: 1;\n    flex-grow: 1;\n    height: 100%;\n    justify-content: center;\n\n    span {\n      display: block;\n      background-image: url(../images/icons2.png);\n      background-repeat: no-repeat;\n      background-size: 337px 298px;\n      height: 24px;\n      width: 24px;\n\n      &.footerIcon1 {\n        background-position: -263px -150px;\n      }\n      &.footerIcon2 {\n        background-position: -150px -274px;\n      }\n      &.footerIcon3 {\n        background-position: -288px -75px;\n      }\n      &.footerIcon4 {\n        background-position: -263px -125px;\n      }\n      &.footerIcon5 {\n        background-position: -263px 0;\n      }\n    }\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -33717,6 +33719,7 @@ function _templateObject() {
 }
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
 
 
 
@@ -33735,20 +33738,48 @@ function (_React$Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Footer).call(this, props));
     _this.state = {
+      imagePath: undefined,
       isDisplay: false
     };
+    _this.setDisplay = _this.setDisplay.bind(_assertThisInitialized(_this));
     return _this;
   }
 
   _createClass(Footer, [{
+    key: "setDisplay",
+    value: function setDisplay(b) {
+      this.setState({
+        isDisplay: b
+      });
+    }
+  }, {
+    key: "sendUpload",
+    value: function sendUpload() {
+      var _this2 = this;
+
+      var params = new FormData();
+      var fileSelectDom = this.refs.image;
+      params.append('image', fileSelectDom.files[0]);
+      axios__WEBPACK_IMPORTED_MODULE_2___default.a.post("".concat(location.protocol, "//").concat(location.hostname).concat(location.port, "/photos/upload"), params).then(function (val) {
+        var rowPath = val.data.file.path;
+
+        _this2.setState({
+          imagePath: rowPath.replace('public/', '')
+        });
+      });
+    }
+  }, {
     key: "renderModal",
     value: function renderModal() {
-      return this.state.isDisplay && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_upload__WEBPACK_IMPORTED_MODULE_2__["default"], null);
+      return this.state.isDisplay && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_upload__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        imagePath: this.state.imagePath,
+        setDisplay: this.setDisplay
+      });
     }
   }, {
     key: "render",
     value: function render() {
-      var _this2 = this;
+      var _this3 = this;
 
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(FooterWrap, null, this.renderModal(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "footerInner"
@@ -33766,16 +33797,24 @@ function (_React$Component) {
         className: "footerIcon2"
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "footerItem"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#",
-        onClick: function onClick() {
-          _this2.setState({
-            isDisplay: !_this2.state.isDisplay
-          });
-        }
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: "image"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "footerIcon3"
-      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "file",
+        id: "image",
+        name: "image",
+        ref: "image",
+        hidden: true,
+        onChange: function onChange() {
+          _this3.sendUpload();
+
+          _this3.setState({
+            isDisplay: !_this3.state.isDisplay
+          });
+        }
+      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "footerItem"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "#"
@@ -33902,7 +33941,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n  -ms-flex-direction: column;\n  flex-direction: column;\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -33980,7 +34019,7 @@ function (_React$Component) {
         id: uid,
         password: upass
       };
-      axios__WEBPACK_IMPORTED_MODULE_2___default.a.post('http://localhost:3000/api/login', data).then(function (val) {
+      axios__WEBPACK_IMPORTED_MODULE_2___default.a.post("".concat(url, "/api/login"), data).then(function (val) {
         _this2.props.setUid(val.data.id);
       })["catch"](function (error) {//this.props.setUid()
       });
@@ -34259,6 +34298,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+var url = "".concat(location.protocol, "//").concat(location.hostname);
+url += location.port ? ":".concat(location.port) : '';
 react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_app__WEBPACK_IMPORTED_MODULE_2__["default"], null), document.getElementById('root'));
 
 /***/ }),
@@ -34350,8 +34391,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -34362,16 +34401,16 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  background: #fff;\n"]);
+  var data = _taggedTemplateLiteral(["\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  background: #fff;\n\n  header {\n    background-color: #fff;\n    display: flex;\n    flex-wrap: wrap;\n    font-size: 16px;\n    font-weight: 600;\n    flex-direction: column;\n\n    &::before {\n      background-color: rgba(0,0,0,.0975);\n      bottom: -1px;\n      content: '';\n      height: 1px;\n      left: 0;\n      position: absolute;\n      right: 0;\n    }\n  }\n\n  .uploadHeader {\n    align-items: center;\n    height: 44px;\n    justify-content: space-between;\n    padding: 0 16px;\n    flex-direction: row;\n    display: flex;\n\n    &__back {\n      flex-basis: 20%;\n      flex-direction: row;\n\n      button {\n        background: 0 0;\n        border: 0;\n        display: block;\n        font-size: 16px;\n        font-weight: 600;\n        padding: 0;\n        margin: 0;\n        font-family: -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif;\n        line-height: 18px;\n\n        span {\n          background-image: url(../images/icons3.png);\n          background-repeat: no-repeat;\n          background-size: 410px 396px;\n          background-position: -387px -143px;\n          height: 21px;\n          width: 11px;\n          display: block;\n          overflow: hidden;\n          text-indent: 110%;\n          white-space: nowrap;\n        }\n      }\n    }\n\n    h1 {\n      align-items: center;\n      color: #262626;\n      display: block;\n      flex-grow: 1;\n      justify-content: center;\n      min-width: 0;\n      overflow: hidden;\n      text-align: center;\n      text-overflow: ellipsis;\n      white-space: nowrap;\n      font-size: 16px;\n    }\n\n    &__share {\n      justify-content: flex-end;\n      flex-basis: 20%;\n      flex-direction: row;\n\n      button {\n        color: #3897f0;\n        background: 0 0;\n        border: 0;\n        display: block;\n        font-size: 16px;\n        font-weight: 600;\n        padding: 0;\n        margin: 0;\n        font-family: -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif;\n        line-height: 18px;\n      }\n    }\n  }\n\n  .uploadForm {\n    border-top: 1px solid #efefef;\n    position: relative;\n\n    &__content {\n      background-color: #fff;\n      border-bottom: 1px solid #efefef;\n      flex-direction: row;\n      height: 81px;\n      padding: 16px;\n      flex-shrink: 0;\n      display: flex;\n    }\n\n    &__avatar {\n      background-color: #fafafa;\n      border-radius: 50%;\n      box-sizing: border-box;\n      display: block;\n      flex: 0 0 auto;\n      overflow: hidden;\n      position: relative;\n      margin-right: 6px;\n      margin-top: -2px;\n      width: 30px;\n      height: 30px;\n\n      img {\n        width: 100%;\n        height: 100%;\n      }\n\n      &::after {\n        border: 1px solid rgba(0,0,0,.0975);\n        border-radius: 50%;\n        bottom: 0;\n        content: '';\n        left: 0;\n        pointer-events: none;\n        position: absolute;\n        right: 0;\n        top: 0;\n      }\n    }\n\n    &__input {\n      flex-grow: 1;\n      flex-shrink: 1;\n      overflow: hidden;\n      width: 100%;\n\n      textarea {\n        ackground: 0 0;\n        border: 0;\n        color: #262626;\n        font-size: 14px;\n        outline: 0;\n        line-height: 18px;\n        height: 45px;\n        overflow: auto;\n        overflow-wrap: break-word;\n        resize: none;\n        font-family: -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif;\n      }\n    }\n\n    &__image {\n      height: 48px;\n      min-width: 48px;\n      position: relative;\n      overflow: hidden;\n      align-items: stretch;\n      border: 0 solid #000;\n      box-sizing: border-box;\n      display: flex;\n      flex-direction: column;\n      flex-shrink: 0;\n      margin: 0;\n      padding: 0;\n      position: relative;\n\n      img {\n        background-color: #efefef;\n        object-fit: cover;\n        height: 48px;\n        width: auto;\n      }\n    }\n\n    &__tag {\n      align-items: center;\n      background-color: #fff;\n      border-bottom: 1px solid #efefef;\n      border-left: none;\n      border-right: none;\n      border-top: 1px solid #efefef;\n      color: #262626;\n      display: -webkit-box;\n      display: -webkit-flex;\n      display: -ms-flexbox;\n      display: flex;\n      height: 44px;\n      width: 100%;\n      flex-direction: row;\n      font-size: 16px;\n      justify-content: space-between;\n      margin-top: 12px;\n      padding: 0;\n      font-family: -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif;\n      line-height: 18px;\n\n      span {\n        margin-left: 16px;\n      }\n\n      &Icon {\n        margin: 0 16px;\n        flex-shrink: 0;\n        background-image: url(../images/icons3.png);\n        background-repeat: no-repeat;\n        background-size: 410px 396px;\n        background-position: -324px -256px;\n        height: 15px;\n        width: 12px;\n      }\n    }\n\n    &__detail {\n      margin-top: 12px;\n      margin-left: 16px;\n\n      button {\n        color: #999;\n        font-size: 12px;\n        line-height: 14px;\n      }\n    }\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -34381,7 +34420,6 @@ function _templateObject() {
 }
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
 
 
 
@@ -34399,49 +34437,78 @@ function (_React$Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Upload).call(this, props));
     _this.state = {
-      imagePath: undefined
+      isDisplay: Boolean,
+      caption: ''
     };
+    _this.closeModal = _this.closeModal.bind(_assertThisInitialized(_this));
     return _this;
   }
 
   _createClass(Upload, [{
-    key: "sendUpload",
-    value: function sendUpload() {
-      var _this2 = this;
-
-      var params = new FormData();
-      var fileSelectDom = this.refs.image;
-      params.append('image', fileSelectDom.files[0]);
-      axios__WEBPACK_IMPORTED_MODULE_2___default.a.post("http://localhost:3000/photos/upload", params).then(function (val) {
-        var rowPath = val.data.file.path;
-
-        _this2.setState({
-          imagePath: rowPath.replace('public/', '')
-        });
-      });
+    key: "closeModal",
+    value: function closeModal() {
+      return this.props.setDisplay(false);
     }
   }, {
-    key: "renderImage",
-    value: function renderImage() {
-      return this.state.imagePath && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: this.state.imagePath
+    key: "handleChangeCaption",
+    value: function handleChangeCaption(event) {
+      this.setState({
+        caption: event.target.value
       });
     }
   }, {
     key: "render",
     value: function render() {
-      var _this3 = this;
+      var _this2 = this;
 
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(UploadModal, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "file",
-        name: "image",
-        ref: "image"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        value: "Upload",
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(UploadModal, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "uploadHeader"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "uploadHeader__back"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "",
         onClick: function onClick() {
-          _this3.sendUpload();
+          _this2.closeModal();
         }
-      }, "upload")), this.renderImage());
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "\u623B\u308B"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "\u65B0\u898F\u6295\u7A3F"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "uploadHeader__share"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        onClick: function onClick() {}
+      }, "\u30B7\u30A7\u30A2\u3059\u308B")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "uploadForm"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+        className: "uploadForm__content"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "uploadForm__avatar"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "https://scontent-nrt1-1.cdninstagram.com/vp/38fb72ba053e423b0174b592ba2aef24/5D9160D6/t51.2885-19/s150x150/21827245_132582387384492_936859094562635776_n.jpg?_nc_ht=scontent-nrt1-1.cdninstagram.com",
+        alt: ""
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "uploadForm__input"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
+        placeholder: "\u30AD\u30E3\u30D7\u30B7\u30E7\u30F3\u3092\u5165\u529B\u2026",
+        onChange: function onChange(event) {
+          _this2.handleChangeCaption(event);
+        },
+        value: this.state.caption
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "uploadForm__image"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: this.props.imagePath,
+        alt: "\u30A2\u30C3\u30D7\u30ED\u30FC\u30C9\u3059\u308B\u5199\u771F\u306E\u30D7\u30EC\u30D3\u30E5\u30FC"
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "uploadForm__tag"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "\u4F4D\u7F6E\u60C5\u5831\u3092\u8FFD\u52A0"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "uploadForm__tagIcon"
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "uploadForm__tag"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "\u30BF\u30B0\u4ED8\u3051\u3059\u308B"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "uploadForm__tagIcon"
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "uploadForm__detail"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        type: "button"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "\u8A73\u7D30\u8A2D\u5B9A"))))));
     }
   }]);
 

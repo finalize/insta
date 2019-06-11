@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import axios from "axios";
 import Upload from "./upload";
 
 const FooterWrap = styled.div`
@@ -24,14 +25,14 @@ const FooterWrap = styled.div`
   user-select: none;
   z-index: 10;
 
-  .footerInner, a {
+  .footerInner, a, label {
     align-items: center;
     display: flex;
     flex-direction: row;
     height: 100%;
   }
 
-  a {
+  a, label {
     justify-content: center;
   }
 
@@ -71,14 +72,41 @@ const FooterWrap = styled.div`
 export default class Footer extends React.Component {
 
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
+      imagePath: undefined,
       isDisplay: false,
     }
+    this.setDisplay = this.setDisplay.bind(this)
+  }
+
+  setDisplay(b) {
+    this.setState({isDisplay: b})
+  }
+
+  sendUpload() {
+    const params = new FormData();
+    const fileSelectDom = this.refs.image;
+
+    params.append('image', fileSelectDom.files[0]);
+
+    axios
+      .post(`${location.protocol}//${location.hostname}${location.port}/photos/upload`, params)
+      .then(
+        (val) => {
+          const rowPath = val.data.file.path;
+          this.setState({imagePath: rowPath.replace('public/', '')})
+        }
+      )
   }
 
   renderModal() {
-    return this.state.isDisplay && <Upload/>
+    return this.state.isDisplay && (
+      <Upload
+        imagePath = {this.state.imagePath}
+        setDisplay = {this.setDisplay}
+      />
+    )
   }
 
   render() {
@@ -89,15 +117,19 @@ export default class Footer extends React.Component {
           <div className="footerItem"><a href="#"><span className="footerIcon1"></span></a></div>
           <div className="footerItem"><a href="#"><span className="footerIcon2"></span></a></div>
           <div className="footerItem">
-            <a href="#"
-              onClick = {
-                () => {
-                  this.setState({isDisplay: !this.state.isDisplay});
-                }
-              }
-            >
-              <span className="footerIcon3"></span>
-            </a></div>
+            <label htmlFor="image">
+              <span className="footerIcon3">
+                <input type="file" id="image" name="image" ref="image" hidden
+                  onChange = {
+                    () => {
+                      this.sendUpload();
+                      this.setState({isDisplay: !this.state.isDisplay});
+                    }
+                  }
+                />
+              </span>
+            </label>
+          </div>
           <div className="footerItem"><a href="#"><span className="footerIcon4"></span></a></div>
           <div className="footerItem"><a href="#"><span className="footerIcon5"></span></a></div>
         </div>
