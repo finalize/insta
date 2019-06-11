@@ -3,7 +3,7 @@ const multer = require('multer')
 var router = express.Router();
 
 const storage =  multer.diskStorage({
-  destination: './files',
+  destination: './public/images',
   filename: (req, file, cb) => {
     cb(null, file.originalname)
   }
@@ -18,7 +18,7 @@ router.post('/upload', uploader.single('image'), function(req, res, next) {
   // デッバグのため、アップしたファイルの名前を表示する
   console.log(file, meta)
   // アップ完了したら200ステータスを送る
-  res.status(200).json({msg: 'アップロード完了'})
+  res.status(200).json({file, meta})
 });
 
 module.exports = router;
